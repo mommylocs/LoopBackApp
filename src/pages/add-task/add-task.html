@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>
+      Add New Task
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Todo Date</ion-label>
+    <ion-datetime displayFormat="DD MMMM, YYYY hh:mm A" [(ngModel)]="todoDate"></ion-datetime>
+  </ion-item>
+  <br>
+  <br>
+
+  <div padding>
+    <button ion-button block [disabled]="name.length < 3">Add Task</button>
+  </div>
+
+</ion-content>
